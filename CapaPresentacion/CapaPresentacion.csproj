@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59146AF2-C088-442F-896E-B5946824B54D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CapaPresentacion</RootNamespace>
+    <AssemblyName>CapaPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Combobox.cs" />
+    <Compile Include="P_agregarusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_agregarusuario.Designer.cs">
+      <DependentUpon>P_agregarusuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_administrador.Designer.cs">
+      <DependentUpon>P_administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_agregarvisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_agregarvisita.Designer.cs">
+      <DependentUpon>P_agregarvisita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_Bienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_Bienvenida.Designer.cs">
+      <DependentUpon>P_Bienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_consultarvisitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_consultarvisitas.Designer.cs">
+      <DependentUpon>P_consultarvisitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_login.Designer.cs">
+      <DependentUpon>P_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="P_agregarusuario.resx">
+      <DependentUpon>P_agregarusuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_administrador.resx">
+      <DependentUpon>P_administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="P_agregarvisita.resx">
+      <DependentUpon>P_agregarvisita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_Bienvenida.resx">
+      <DependentUpon>P_Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_consultarvisitas.resx">
+      <DependentUpon>P_consultarvisitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_login.resx">
+      <DependentUpon>P_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{1e85222d-4a91-4e80-b2d8-d46de19de813}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
+      <Project>{3fb28835-b303-4ab7-afce-d1f31aa74a1c}</Project>
+      <Name>CapaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{7871e83d-ec4c-463c-814c-6a7b483ecf29}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\minimize_window_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\itla1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\restore_window_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\close_window_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\communicate_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\search_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\channels4_profile.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\handshake_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\handshake_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\add_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\pencil_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\delete_bin_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\user_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\add_administrator_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\ask_question_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\shutdown_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\Imagen2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\broom_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagenes\search_16px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
